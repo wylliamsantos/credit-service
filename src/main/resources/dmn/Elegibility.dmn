@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="definitions_0m6t6fr" name="definitions" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.12.0">
+  <decision id="Elegibility" name="Elegibility">
+    <decisionTable id="decisionTable" hitPolicy="FIRST">
+      <input id="InputClause_1wrfujf" label="Age" camunda:inputVariable="">
+        <inputExpression id="LiteralExpression_11w5ece" typeRef="integer" expressionLanguage="feel">
+          <text>age</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_18k6bsv" label="Income" camunda:inputVariable="">
+        <inputExpression id="LiteralExpression_0apbhh9" typeRef="double" expressionLanguage="feel">
+          <text>income</text>
+        </inputExpression>
+      </input>
+      <output id="output1" label="Elegibility" name="elegibility" typeRef="boolean" />
+      <rule id="row-61288242-2">
+        <description>Eligible</description>
+        <inputEntry id="UnaryTests_07tp3su">
+          <text>&lt; 18</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1u75qb8">
+          <text>&gt; 5000</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_032qbjs">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="row-61288242-1">
+        <description>Not Eligible</description>
+        <inputEntry id="UnaryTests_0e85r25">
+          <text>&lt; 18</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1es4wj4">
+          <text>-</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_14xhnjf">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ynuvda">
+        <description>Eligible</description>
+        <inputEntry id="UnaryTests_17vkb06">
+          <text>&gt;= 18</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0v53ej7">
+          <text>&gt; 2000</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0p7f1kg">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1nu1b6m">
+        <description>Not Eligible</description>
+        <inputEntry id="UnaryTests_0lz2vgs">
+          <text>&gt;=18</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sqkb2h">
+          <text>&lt; 2000</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ah6fe6">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="DMNDiagram_0l7mce0">
+      <dmndi:DMNShape id="DMNShape_0aig0k7" dmnElementRef="Elegibility">
+        <dc:Bounds height="80" width="180" x="150" y="150" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
