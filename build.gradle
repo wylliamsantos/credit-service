@@ -24,16 +24,24 @@ ext {
 	set('hibernateValidatorVersion', "6.1.5.Final")
 	set('modelMapperVersion', "3.0.0")
 	set('camundaEngineDmnVersion', "7.16.0")
+	set('junitVersion', "4.13.1")
+	set('randomBeansVersion', "3.8.0")
 }
 
 dependencies {
-	implementation "org.springframework.boot:spring-boot-starter-web"
-	implementation "org.springframework.cloud:spring-cloud-starter-bootstrap"
+	implementation ("org.springframework.boot:spring-boot-starter-web") {
+		exclude group: 'junit', module: 'junit'
+	}
+	implementation ("org.springframework.cloud:spring-cloud-starter-bootstrap") {
+		exclude group: 'junit', module: 'junit'
+	}
 	//implementation 'org.springframework.cloud:spring-cloud-starter-config'
 	implementation "org.camunda.bpm.dmn:camunda-engine-dmn:${camundaEngineDmnVersion}"
 	implementation "org.hibernate:hibernate-validator:${hibernateValidatorVersion}"
 	implementation "org.modelmapper:modelmapper:${modelMapperVersion}"
+	implementation "io.github.benas:random-beans:${randomBeansVersion}"
 	implementation "org.apache.commons:commons-lang3"
+	implementation "junit:junit:${junitVersion}"
 
 	compileOnly "org.projectlombok:lombok"
 	annotationProcessor "org.projectlombok:lombok"

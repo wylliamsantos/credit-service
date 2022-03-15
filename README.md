@@ -1,5 +1,7 @@
 # credit-service
 
+![Known Vulnerabilities](https://snyk.io/test/github/wylliamsantos/credit-service/badge.svg)
+
 This project was created to show development skills with Springboot and Java 16.
 
 ## Frameworks and Tecnologies
@@ -8,7 +10,7 @@ All the project's dependencies are listed below:
 
 - Java 16
 - Spring Boot 2
-- DMN CAmunda
+- DMN Camunda
 - Hibernate Validator
 - Lombok
 
