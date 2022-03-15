@@ -1,0 +1,5 @@
+ignore:
+  - "src/main/java/com/wvs/clientservice/configuration"
+  - "src/main/java/com/wvs/clientservice/dto"
+  - "src/main/java/com/wvs/clientservice/enumeration"
+  - "src/main/java/com/wvs/clientservice/exception"
