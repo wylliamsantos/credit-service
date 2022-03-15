@@ -1,6 +1,6 @@
 # credit-service
 
-![Known Vulnerabilities](https://snyk.io/test/github/wylliamsantos/credit-service/badge.svg)
+[![codecov](https://codecov.io/gh/wylliamsantos/credit-service/branch/main/graph/badge.svg?token=4265S6LK23)](https://codecov.io/gh/wylliamsantos/credit-service) ![Known Vulnerabilities](https://snyk.io/test/github/wylliamsantos/credit-service/badge.svg)
 
 This project was created to show development skills with Springboot and Java 16.
 
