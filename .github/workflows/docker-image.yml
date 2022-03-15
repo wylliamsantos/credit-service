@@ -16,18 +16,6 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           tag: 1.0.${{ github.run_number }}
-  functional_tests:
-    name: Tests and coverage generation
-    runs-on: ubuntu-latest
-    steps:
-      - name: Test and Report with gradle
-        run: ./gradlew test jacocoTestReport
-      - name: Upload to Codecov
-        uses: codecov/codecov-action@v2.0.2
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          file: ./build/reports/jacoco/test/jacocoTestReport.xml
-          flags: unittests
   push_to_registry:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
