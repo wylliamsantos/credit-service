@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "automerge": false,
+  "automergeType": "branch",
+  "packageRules": [
+    {
+      "packagePatterns": ["*"],
+      "groupName": "all dependencies",
+      "automerge": false
+    }
+  ]
+}
